@@ -1,0 +1,73 @@
+<!DOCTYPE html>
+<html lang="en" xmlns:th="http://www.thymeleaf.org">
+<head>
+    <meta charset="UTF-8">
+    <title th:text="#{GREETING.MESSAGE}">List of Books</title>
+</head>
+<body>
+<h1><u>List of All Books</u></h1>
+
+<!--[[${books}]]-->
+<a href="/?lang=en">English</a>
+<a href="/?lang=km">Khmer</a>
+<a href="/?lang=th">Thai</a>
+
+<a href="/create">
+    <button>Create Book</button>
+</a>
+<table border="1" style="border-collapse: collapse;">
+    <tr>
+        <th th:text="#{table.id}">ID</th>
+        <th th:text="#{table.title}">Title</th>
+        <th>Author</th>
+        <th>Publisher</th>
+        <th>Thumbnail</th>
+        <th>Category</th>
+        <th>Action</th>
+    </tr>
+
+    <tr th:each="book_minuth: ${books}">
+        <td>[[${book_minuth.getId()}]]</td>
+        <td th:text="${book_minuth.title}">Title</td>
+        <td th:text="${book_minuth.author}"></td>
+        <td th:text="${book_minuth.getPublisher()}"></td>
+
+        <td>
+            <img style="width: 100px; height: 100px" th:src="${book_minuth.getThumbnail()}" alt="image">
+        </td>
+
+        <td th:text="${book_minuth.category.name}">Category Name</td>
+
+        <td>
+            <a th:href="@{/view/{id}(id=${book_minuth.getId()})}">
+                <button>View</button>
+            </a>
+
+            <a th:href="@{/update/{id}(id=${book_minuth.getId()})}">
+                <button>Update</button>
+            </a>
+
+            <button class="delete-btn" th:attr="data-id=${book_minuth.getId()}">Delete</button>
+        </td>
+    </tr>
+</table>
+
+<script type="text/javascript" src="static/js/jquery.min.js">
+</script>
+<script>
+
+    $(document).ready(function () {
+        $('body').on('click', '.delete-btn', function () {
+            var data_id = $(this).attr("data-id");
+
+            if (confirm("Do you want to delete?")) {
+                window.location = "http://localhost:8080/remove/" + data_id;
+            }
+
+        });
+    });
+
+
+</script>
+</body>
+</html>

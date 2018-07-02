@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html lang="en" xmlns:th="http://www.thymeleaf.org">
+<head>
+    <meta charset="UTF-8">
+    <title>Create Book</title>
+</head>
+<body>
+<h1 th:text="${isNew ? 'Create Book' : 'Update Book'}">Create Book</h1>
+
+<form th:action="${isNew ? '/create/submit' : '/update/submit'}" method="post" th:object="${book}"
+      enctype="multipart/form-data">
+
+    ID: <input type="number" th:field="*{id}"><span style="color: red;" th:if="${#fields.hasErrors('id')}"
+                                                    th:errors="*{id}"></span><br>
+
+
+    Title: <input type="text" th:field="*{title}">
+    <span style="
+color: red;" th:if="${#fields.hasErrors('title')}" th:text="${#fields.errors('title')}">
+
+
+        </span> <br>
+    Author: <input type="text" th:field="*{author}"><br>
+    Publisher: <input type="text" th:field="*{publisher}"><br>
+    Thumbnail: <input type="text" th:field="*{thumbnail}" hidden><br>
+
+    Category:
+    <select th:name="category.id" id="category_id">
+        <option th:each="category: ${categories}" th:object="${category}" th:value="*{id}" th:text="*{name}"></option>
+    </select>
+
+    <input type="file" name="file"><br>
+
+    <input type="submit" value="Submit">
+
+</form>
+</body>
+<script src="/static/js/jquery.min.js"></script>
+<script th:inline="javascript">
+    /*<![CDATA[*/
+    var book_cate_id = /*[[${book.category.id}]]*/ null;
+    var categories = /*[[${categories}]]*/ null;
+
+    console.log(book_cate_id);
+    // console.log(categories);
+    /*]]>*/
+
+
+    $(document).ready(function () {
+        $.each(categories, function (index, category) {
+            // console.log(category);
+            if (book_cate_id == category.id) {
+                $('#category_id option[value="' + book_cate_id + '"]').attr('selected', 'selected');
+            }
+        })
+    });
+
+</script>
+
+</html>
