@@ -6,6 +6,8 @@ import org.springframework.boot.autoconfigure.SpringBootApplication;
 import org.springframework.context.ApplicationContext;
 import org.springframework.security.crypto.password.PasswordEncoder;
 
+import java.util.Base64;
+
 @SpringBootApplication
 public class Topic03PpApplication {
 
@@ -27,6 +29,28 @@ public class Topic03PpApplication {
 
 
 
+        String username = "API_USERNAME";
+        String password = "API_PASSWORD";
+        String basicKey = Base64.getUrlEncoder().encodeToString((username + ":" + password).getBytes());
+
+        System.out.println(basicKey);
+
+
+
+
 
     }
 }
+
+
+
+
+
+
+
+
+
+
+
+
+
