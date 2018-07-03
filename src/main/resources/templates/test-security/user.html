@@ -1,10 +1,36 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="en" xmlns:sec="http://www.thymeleaf.org/extras/spring-security"
+                xmlns:th="http://www.thymeleaf.org"
+>
 <head>
     <meta charset="UTF-8">
     <title>Title</title>
 </head>
 <body>
     <h1 style="color: cornflowerblue;">This is USER!!!</h1>
+
+
+
+    <div sec:authorize="isAnonymous()">
+        Hello Anonymous!!!
+    </div>
+
+    <div sec:authorize="isAuthenticated()">
+        This content is only shown to authenticated users.
+    </div>
+    <div sec:authorize="hasRole('ROLE_ADMIN')">
+        This content is only shown to administrators.
+    </div>
+    <div sec:authorize="hasRole('ROLE_USER')">
+        This content is only shown to users.
+    </div>
+
+
+    <h1 sec:authentication="name"></h1>
+
+    <h1 th:text="${#authentication}"></h1>
+
+
+
 </body>
 </html>

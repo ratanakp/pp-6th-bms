@@ -23,7 +23,7 @@ public class CustomAuthenticationSuccessHandler implements AuthenticationSuccess
 
         HttpSession httpSession = httpServletRequest.getSession();
 
-        httpSession.setMaxInactiveInterval(5);
+        httpSession.setMaxInactiveInterval(50000);
 
 
         System.out.println("success");

@@ -18,7 +18,7 @@ public class CustomAuthenticationEntryPoint implements AuthenticationEntryPoint 
                          HttpServletResponse httpServletResponse,
                          AuthenticationException e) throws IOException, ServletException {
 
-//        System.out.println("Login Required!!!");
+        System.out.println("Login Required!!!");
 
 
 //        System.out.println(httpServletRequest.getRequestURL().toString());
