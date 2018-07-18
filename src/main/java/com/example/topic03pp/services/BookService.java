@@ -1,7 +1,9 @@
 package com.example.topic03pp.services;
 
 import com.example.topic03pp.models.Book;
-import com.example.topic03pp.models.filters.BookFilter;
+import com.example.topic03pp.utilities.Paginate;
+import com.example.topic03pp.utilities.Pagination;
+import com.example.topic03pp.utilities.filters.BookFilter;
 
 import java.util.List;
 
@@ -22,4 +24,16 @@ public interface BookService {
     boolean create(Book book);
 
     boolean creates(List<Book> books);
+
+
+    // all about pagination
+
+    Integer countFilter(BookFilter bookFilter);
+
+    List<Book> getBookFilterPagination(BookFilter bookFilter, Pagination pagination);
+
+    List<Book> getBookFilterPagination(BookFilter bookFilter, Paginate paginate);
+
+
+
 }

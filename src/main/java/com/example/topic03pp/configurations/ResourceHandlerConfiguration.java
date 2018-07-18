@@ -28,11 +28,18 @@ public class ResourceHandlerConfiguration implements WebMvcConfigurer {
         registry.addResourceHandler("/swagger-ui/**")
                 .addResourceLocations("classpath:/static/swagger/");
 
+
+
+        registry.addResourceHandler("/swagger-ui-v2/**")
+                .addResourceLocations("classpath:/static/swagger-v2.1.3/dist/");
+
     }
 
     @Override
     public void addViewControllers(ViewControllerRegistry registry) {
         registry.addViewController("/swagger").setViewName("/swagger/index");
+
+        registry.addViewController("/swaggerv2").setViewName("/swagger/index-v2");
 
 
         registry.addViewController("/login").setViewName("login-page");

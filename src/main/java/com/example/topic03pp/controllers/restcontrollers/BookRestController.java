@@ -2,16 +2,18 @@ package com.example.topic03pp.controllers.restcontrollers;
 
 
 import com.example.topic03pp.models.Book;
-import com.example.topic03pp.models.filters.BookFilter;
 import com.example.topic03pp.services.BookService;
 import com.example.topic03pp.services.UploadService;
+import com.example.topic03pp.utilities.Pagination;
+import com.example.topic03pp.utilities.filters.BookFilter;
 import io.swagger.annotations.Api;
 import io.swagger.annotations.ApiOperation;
 import io.swagger.annotations.ApiResponse;
 import io.swagger.annotations.ApiResponses;
+import org.springframework.http.HttpStatus;
+import org.springframework.http.ResponseEntity;
 import org.springframework.web.bind.annotation.*;
 import org.springframework.web.multipart.MultipartFile;
-import springfox.documentation.annotations.ApiIgnore;
 
 import java.util.HashMap;
 import java.util.List;
@@ -194,6 +196,48 @@ public class BookRestController {
 
         return response;
     }
+
+
+
+
+    //all about pagination
+
+    @GetMapping("/pagination")
+    public ResponseEntity<Map<String, Object>> getBookFilterPagination(BookFilter bookFilter, Pagination pagination) {
+
+        if (bookFilter.getCateId() != null || bookFilter.getBookTitle() != null) {
+            System.out.println("hermes");
+            pagination.setTotalCount(this.bookService.countFilter(bookFilter));
+        } else {
+            int totalBookRecord = this.bookService.count();
+            System.out.println("gucci");
+            pagination.setTotalCount(totalBookRecord);
+        }
+
+        System.out.println(pagination);
+
+
+        Map<String, Object> response = new HashMap<>();
+        List<Book> books = this.bookService.getBookFilterPagination(bookFilter, pagination);
+
+        if (books == null || books.size() == 0) {
+            response.put("status", false);
+            response.put("message", "Book Not Found!!!");
+            response.put("paginate", pagination);
+            response.put("data", HttpStatus.NOT_FOUND);
+
+            return new ResponseEntity<>(response, HttpStatus.NOT_FOUND);
+        } else {
+            response.put("status", true);
+            response.put("message", "Book Found!!!");
+            response.put("paginate", pagination);
+            response.put("data", books);
+
+            return ResponseEntity.ok(response);
+        }
+    }
+
+
 
 
 }

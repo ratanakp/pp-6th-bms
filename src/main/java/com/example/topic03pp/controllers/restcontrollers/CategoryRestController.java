@@ -4,6 +4,8 @@ package com.example.topic03pp.controllers.restcontrollers;
 import com.example.topic03pp.models.Book;
 import com.example.topic03pp.models.Category;
 import com.example.topic03pp.services.CategoryService;
+import io.swagger.annotations.ApiOperation;
+import io.swagger.annotations.Authorization;
 import org.springframework.web.bind.annotation.GetMapping;
 import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RestController;
@@ -24,6 +26,7 @@ public class CategoryRestController {
     }
 
     @GetMapping("")
+    @ApiOperation(value = "Get All Categories", authorizations = {@Authorization(value = "basicAuth")})
     public Map<String, Object> getAll() {
 
         Map<String, Object> response = new HashMap<>();

@@ -1,7 +1,7 @@
-package com.example.topic03pp.models.filters;
-
+package com.example.topic03pp.utilities.filters;
 
 public class BookFilter {
+
     private Integer cateId;
     private String bookTitle;
 

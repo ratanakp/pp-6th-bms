@@ -80,7 +80,7 @@ public class SpringWebSecurityConfiguration extends WebSecurityConfigurerAdapter
         http.authorizeRequests().antMatchers("/admin/**").hasAnyRole("ADMIN");
         http.authorizeRequests().antMatchers("/dba/**").hasAnyRole("DBA", "ADMIN");
         http.authorizeRequests().antMatchers("/user/**").hasAnyRole("USER", "DBA", "ADMIN");
-
+        http.authorizeRequests().antMatchers("/swaggerv2/**").hasAnyRole("ADMIN");
 
         http.exceptionHandling()
                 .authenticationEntryPoint(authenticationEntryPoint);

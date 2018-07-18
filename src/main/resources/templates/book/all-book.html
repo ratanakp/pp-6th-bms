@@ -409,6 +409,9 @@
             $.ajax({
                 url: '/api/v1/book/filter?cateId=' + cateId + '&bookTitle=' + bookTitle,
                 // url: 'http://localhost:1111//ajax/book/all/map',
+                beforeSend: function (xhr) {
+                    xhr.setRequestHeader ("Authorization", "Basic QVBJX1VTRVJOQU1FOkFQSV9QQVNTV09SRA==");
+                },
                 type: 'get',
                 success: function (response) {
                     console.log(response);
@@ -473,6 +476,9 @@
 
                 $.ajax({
                     url: '/api/v1/book/' + data_id,
+                    beforeSend: function (xhr) {
+                        xhr.setRequestHeader ("Authorization", "Basic QVBJX1VTRVJOQU1FOkFQSV9QQVNTV09SRA==");
+                    },
                     type: 'delete',
                     success: function (response) {
                         console.log(response);

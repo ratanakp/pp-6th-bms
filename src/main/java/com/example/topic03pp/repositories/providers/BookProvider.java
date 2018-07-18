@@ -1,7 +1,10 @@
 package com.example.topic03pp.repositories.providers;
 
 import com.example.topic03pp.models.Book;
-import com.example.topic03pp.models.filters.BookFilter;
+import com.example.topic03pp.utilities.Paginate;
+import com.example.topic03pp.utilities.Pagination;
+import com.example.topic03pp.utilities.filters.BookFilter;
+import org.apache.ibatis.annotations.Param;
 import org.apache.ibatis.jdbc.SQL;
 
 public class BookProvider {
@@ -42,6 +45,55 @@ public class BookProvider {
                 WHERE("b.title iLIKE '%' || #{bookTitle} || '%'");
 
             ORDER_BY("b.id desc");
+
+        }}.toString();
+    }
+
+
+
+    //all about pagination
+
+    public String countFilter(BookFilter bookFilter) {
+        return new SQL(){{
+            SELECT("count(*)");
+            FROM("tb_book b");
+
+            if (bookFilter.getCateId() != null)
+                WHERE("b.cate_id=#{cateId}");
+
+            if (bookFilter.getBookTitle() != null)
+                WHERE("b.title iLIKE  '%' || #{bookTitle} || '%'");
+
+        }}.toString();
+    }
+
+
+    /*
+     *
+     * TODO: Sql Function Script I place in folder db/schema.sql
+     *
+     * */
+    public String getBookFilterPaginationProvider(@Param("bookFilter") BookFilter bookFilter, @Param("pagination") Pagination pagination) {
+        return new SQL() {{
+            SELECT("*");
+
+            if (bookFilter.getBookTitle() == null)
+                bookFilter.setBookTitle("");
+
+            FROM("get_book_filter_pagination(#{bookFilter.cateId}, #{bookFilter.bookTitle}, #{pagination.limit}, #{pagination.offset})");
+
+        }}.toString();
+    }
+
+
+    public String getBookFilterPaginateProvider(@Param("bookFilter") BookFilter bookFilter, @Param("paginate") Paginate paginate) {
+        return new SQL() {{
+            SELECT("*");
+
+            if (bookFilter.getBookTitle() == null)
+                bookFilter.setBookTitle("");
+
+            FROM("get_book_filter_pagination(#{bookFilter.cateId}, #{bookFilter.bookTitle}, #{paginate.limit}, #{paginate.offset})");
 
         }}.toString();
     }
