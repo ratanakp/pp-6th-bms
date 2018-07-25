@@ -3,26 +3,6 @@
   <component name="ChangeListManager">
     <list default="true" id="8b4f9503-2a4c-4c5b-b874-06e3ff6db2c6" name="Default Changelist" comment="">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/example/topic03pp/configurations/ApiSecurityConfiguration.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/example/topic03pp/configurations/ApiSecurityConfiguration.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/example/topic03pp/configurations/ResourceHandlerConfiguration.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/example/topic03pp/configurations/ResourceHandlerConfiguration.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/example/topic03pp/configurations/SpringWebSecurityConfiguration.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/example/topic03pp/configurations/SpringWebSecurityConfiguration.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/example/topic03pp/configurations/SwaggerConfiguration.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/example/topic03pp/configurations/SwaggerConfiguration.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/example/topic03pp/controllers/BookController.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/example/topic03pp/controllers/BookController.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/example/topic03pp/controllers/restcontrollers/BookRestController.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/example/topic03pp/controllers/restcontrollers/BookRestController.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/example/topic03pp/controllers/restcontrollers/CategoryRestController.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/example/topic03pp/controllers/restcontrollers/CategoryRestController.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/example/topic03pp/models/filters/BookFilter.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/example/topic03pp/repositories/BookRepository.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/example/topic03pp/repositories/BookRepository.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/example/topic03pp/repositories/providers/BookProvider.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/example/topic03pp/repositories/providers/BookProvider.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/example/topic03pp/services/BookService.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/example/topic03pp/services/BookService.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/example/topic03pp/services/impl/BookServiceImpl.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/example/topic03pp/services/impl/BookServiceImpl.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/resources/db/schema.sql" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/db/schema.sql" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/resources/templates/book/all-book.html" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/templates/book/all-book.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/com/example/topic03pp/configurations/ApiSecurityConfiguration.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/com/example/topic03pp/configurations/ApiSecurityConfiguration.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/com/example/topic03pp/configurations/ResourceHandlerConfiguration.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/com/example/topic03pp/configurations/ResourceHandlerConfiguration.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/com/example/topic03pp/configurations/SpringWebSecurityConfiguration.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/com/example/topic03pp/configurations/SpringWebSecurityConfiguration.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/com/example/topic03pp/configurations/SwaggerConfiguration.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/com/example/topic03pp/configurations/SwaggerConfiguration.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/com/example/topic03pp/controllers/restcontrollers/CategoryRestController.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/com/example/topic03pp/controllers/restcontrollers/CategoryRestController.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/templates/book/all-book.html" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/templates/book/all-book.html" afterDir="false" />
     </list>
     <ignored path="$PROJECT_DIR$/target/" />
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
@@ -35,15 +15,15 @@
     <session id="-1531361779">
       <usages-collector id="statistics.lifecycle.project">
         <counts>
-          <entry key="project.closed" value="11" />
+          <entry key="project.closed" value="13" />
           <entry key="project.open.time.0" value="5" />
-          <entry key="project.open.time.1" value="3" />
+          <entry key="project.open.time.1" value="4" />
           <entry key="project.open.time.10" value="1" />
           <entry key="project.open.time.17" value="1" />
           <entry key="project.open.time.5" value="1" />
           <entry key="project.open.time.8" value="1" />
           <entry key="project.open.time.9" value="1" />
-          <entry key="project.opened" value="13" />
+          <entry key="project.opened" value="14" />
         </counts>
       </usages-collector>
       <usages-collector id="statistics.file.extensions.open">
@@ -71,7 +51,7 @@
       <usages-collector id="statistics.file.extensions.edit">
         <counts>
           <entry key="html" value="279" />
-          <entry key="java" value="1690" />
+          <entry key="java" value="1695" />
           <entry key="sql" value="39" />
           <entry key="xml" value="2" />
         </counts>
@@ -79,7 +59,7 @@
       <usages-collector id="statistics.file.types.edit">
         <counts>
           <entry key="HTML" value="278" />
-          <entry key="JAVA" value="1690" />
+          <entry key="JAVA" value="1695" />
           <entry key="SQL" value="39" />
           <entry key="ThymeleafExpressions" value="1" />
           <entry key="XML" value="2" />
@@ -93,12 +73,12 @@
     </session>
   </component>
   <component name="FileEditorManager">
-    <leaf>
+    <leaf SIDE_TABS_SIZE_LIMIT_KEY="300">
       <file pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/src/main/java/com/example/topic03pp/utilities/Paginate.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="201">
-              <caret line="46" column="18" selection-start-line="46" selection-start-column="18" selection-end-line="46" selection-end-column="18" />
+            <state relative-caret-position="211">
+              <caret line="34" column="31" lean-forward="true" selection-start-line="34" selection-start-column="31" selection-end-line="34" selection-end-column="31" />
             </state>
           </provider>
         </entry>
@@ -176,7 +156,7 @@
       <path value="$PROJECT_DIR$/src/main/resources/static/swagger/swagger-ui-dist-package/package.json" />
     </packageJsonPaths>
   </component>
-  <component name="ProjectFrameBounds" extendedState="6" fullScreen="true">
+  <component name="ProjectFrameBounds" fullScreen="true">
     <option name="y" value="23" />
     <option name="width" value="1024" />
     <option name="height" value="701" />
@@ -1006,7 +986,6 @@
       <foldersAlwaysOnTop value="true" />
     </navigator>
     <panes>
-      <pane id="AndroidView" />
       <pane id="ProjectPane">
         <subPane>
           <expand>
@@ -1074,6 +1053,7 @@
           <select />
         </subPane>
       </pane>
+      <pane id="AndroidView" />
       <pane id="Scope" />
       <pane id="PackagesPane" />
     </panes>
@@ -1093,7 +1073,7 @@
     <property name="project.structure.proportion" value="0.0" />
     <property name="project.structure.side.proportion" value="0.0" />
     <property name="restartRequiresConfirmation" value="false" />
-    <property name="settings.editor.selected.configurable" value="spring" />
+    <property name="settings.editor.selected.configurable" value="editor.preferences.fonts.default" />
   </component>
   <component name="RecentsManager">
     <key name="CopyFile.RECENT_KEYS">
@@ -1148,18 +1128,19 @@
       <workItem from="1530860185554" duration="2718000" />
       <workItem from="1531710736168" duration="41000" />
       <workItem from="1531723134574" duration="471000" />
-      <workItem from="1531877798776" duration="2166000" />
+      <workItem from="1531877798776" duration="2335000" />
+      <workItem from="1531889221617" duration="89000" />
     </task>
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="16046000" />
+    <option name="totallyTimeSpent" value="16304000" />
   </component>
   <component name="ToolWindowManager">
-    <frame x="0" y="0" width="1680" height="1050" extended-state="6" />
+    <frame x="0" y="0" width="1680" height="1050" extended-state="0" />
     <editor active="true" />
     <layout>
-      <window_info active="true" content_ui="combo" id="Project" order="0" visible="true" weight="0.26495728" />
+      <window_info content_ui="combo" id="Project" order="0" visible="true" weight="0.26800978" />
       <window_info id="Structure" order="1" side_tool="true" weight="0.25" />
       <window_info id="Designer" order="2" />
       <window_info id="Image Layers" order="3" />
@@ -1175,7 +1156,7 @@
       <window_info anchor="bottom" id="Inspection" order="5" weight="0.4" />
       <window_info anchor="bottom" id="TODO" order="6" />
       <window_info anchor="bottom" id="Spring" order="7" />
-      <window_info anchor="bottom" id="Terminal" order="8" weight="0.3295129" />
+      <window_info anchor="bottom" id="Terminal" order="8" weight="0.32857144" />
       <window_info anchor="bottom" id="Event Log" order="9" side_tool="true" />
       <window_info anchor="bottom" id="Messages" order="10" />
       <window_info anchor="bottom" id="Java Enterprise" order="11" />
@@ -1413,13 +1394,7 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/com/example/topic03pp/models/filters/BookFilter.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="589">
-          <caret line="39" lean-forward="true" selection-start-line="39" selection-end-line="39" />
-        </state>
-      </provider>
-    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/com/example/topic03pp/models/filters/BookFilter.java" />
     <entry file="file://$PROJECT_DIR$/src/main/java/com/example/topic03pp/utilities/exceptionsCustomization/CustomGenericException.java">
       <provider selected="true" editor-type-id="text-editor" />
     </entry>
@@ -1550,8 +1525,8 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/src/main/java/com/example/topic03pp/utilities/Paginate.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="201">
-          <caret line="46" column="18" selection-start-line="46" selection-start-column="18" selection-end-line="46" selection-end-column="18" />
+        <state relative-caret-position="211">
+          <caret line="34" column="31" lean-forward="true" selection-start-line="34" selection-start-column="31" selection-end-line="34" selection-end-column="31" />
         </state>
       </provider>
     </entry>
